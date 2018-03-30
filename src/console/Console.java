@@ -29,7 +29,6 @@ public class Console {
         return true;
     }
 
-  
    
     public boolean isLigar() {
         return ligar;
