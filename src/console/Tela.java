@@ -8,15 +8,15 @@ package console;
 import console.Console;
 
 public class Tela extends javax.swing.JFrame {
-    Console console1;
-    
-    
+
+    Console console;
+
     /**
      * Creates new form Tela
      */
     public Tela() {
         initComponents();
-        Console console1 = new Console();
+        console = new Console();
     }
 
     /**
@@ -174,14 +174,13 @@ public class Tela extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void LigarConsoleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LigarConsoleActionPerformed
-     console1.ligar1();
-     if(console1.ligar1() == true){
-         ligar.setText("ligado");
-     }
-     else{
-         ligar.setText("desligado");
-     }
-     
+        console.Ligar();
+        if (console.IsOn() == true) {
+            ligar.setText("ligado");
+        } else {
+            ligar.setText("desligado");
+        }
+
     }//GEN-LAST:event_LigarConsoleActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -215,7 +214,7 @@ public class Tela extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {

@@ -1,55 +1,49 @@
 package console;
 
-
 public class Console {
-    private boolean ligar;
+
+    private boolean isOn;
     private boolean tampaDoDisco;
     private boolean memoryCard;
     private boolean controle;
-    
-    public Console(){
-        this.ligar = false;
+
+    public Console() {
+        this.isOn = false;
         this.tampaDoDisco = false;
         this.memoryCard = false;
         this.controle = false;
     }
-    
-    Console console1;
-       
-    public boolean ligar1(){
-          if(console1.isLigar()==false){
-            // vai ligar
-            console1.setLigar(true);
-            }
-                else if(console1.isLigar()==true){
-                    // vai desligar
-                    console1.setLigar(false);
-                    return false;
-                    }
-        return true;
+
+//    Console console1;
+    public void Ligar() {
+
+        setLigar(!IsOn());
+
+//        if (IsOn() == false) {
+//            // vai ligar
+//            setLigar(true);
+//        } else if (IsOn() == true) {
+//            // vai desligar
+//            setLigar(false);
+//        }
     }
 
-   
-    public boolean isLigar() {
-        return ligar;
+    public boolean IsOn() {
+        return isOn;
     }
 
-   
     public void setLigar(boolean ligar) {
-        this.ligar = ligar;
+        this.isOn = ligar;
     }
 
-    
     public boolean isTampaDoDisco() {
         return tampaDoDisco;
     }
 
-    
     public void setTampaDoDisco(boolean tampaDoDisco) {
         this.tampaDoDisco = tampaDoDisco;
     }
 
-    
     public boolean isMemoryCard() {
         return memoryCard;
     }
@@ -58,12 +52,10 @@ public class Console {
         this.memoryCard = memoryCard;
     }
 
- 
     public boolean isControle() {
         return controle;
     }
 
-   
     public void setControle(boolean controle) {
         this.controle = controle;
     }
